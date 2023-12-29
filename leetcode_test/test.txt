@@ -1,0 +1,11 @@
+Domain Adaptation.
+The field of unsupervised domain adaptation (UDA) for visual data focuses on the alignment of feature distributions between source and target domains, a concept supported by theoretical evidence that suggests minimizing domain divergence can reduce the upper bound of target domain error ~\cite{ben2010theory}. Several deep learning techniques have adopted this strategy, employing distribution matching at various hidden layers within networks like CNNs (~\cite{tzeng2014deep}, ~\cite{ganin2016domain}, ~\cite{long2015learning}). These methods generally do not account for the interaction between the network's decision boundary and the distribution of target features, an aspect our work considers.
+
+Low-density Separation.
+The principle of low-density separation, often used in semi-supervised learning (SSL), places the decision boundary in regions with few unlabeled samples, with the aim of enhancing discriminative feature representation ~\cite{chapelle2005semi}, ~\cite{joachims1999transductive}. Our approach extends this principle to deep domain adaptation, and it is akin to entropy minimization strategies in SSL ~\cite{grandvalet2004semi}.~\cite{long2016unsupervised} incorporated entropy minimization to gauge the distance of samples from decision boundaries. In contrast, our method achieves low-density separation by perturbing the decision boundary and detecting target samples affected by such perturbations.
+
+Dropout.
+Dropout is a well-known regularization technique that aims to reduce overfitting in neural networks by randomly omitting units during training, which effectively samples from numerous thinned network architectures ~\cite{srivastava2014dropout}. At inference time, the network utilizes all neurons, ensuring that the network remains robust to input noise. Our method employs dropout in an adversarial manner, transforming the classifier into a critic that is sensitive to noise, which is a novel application compared to traditional dropout uses.
+
+
+

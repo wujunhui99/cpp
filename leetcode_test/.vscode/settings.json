@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "unordered_map": "cpp",
+        "iostream": "cpp",
+        "functional": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "cmath": "cpp"
+    },
+    // "extensions.supported": ["力扣 LeetCode.LeetCode"]
+}
+
